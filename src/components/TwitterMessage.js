@@ -5,8 +5,7 @@ class TwitterMessage extends React.Component {
     super(props);
 
     this.state = {
-      maxChars: 140,
-      value: this.props.maxChars
+      value: ''
     };
   }
 
