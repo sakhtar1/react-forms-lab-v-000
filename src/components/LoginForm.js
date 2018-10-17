@@ -22,11 +22,10 @@ class LoginForm extends React.Component {
   }
 
   handleSubmit = event=> {
-    const username = event.target.children[0].value
-    const password = event.target.children[1].value
-    if (username && password) return
-    alert('Usersubmitted: ' + this.state.value);
     event.preventDefault();
+    if (!this.state.username || !this.state.password) return
+
+    this.props.onSubmit(this.state)
   }
 
   render() {
