@@ -14,7 +14,7 @@ class LoginForm extends React.Component {
       name: event.target.value
     })
   }
-   
+
   handlePasswordChange = event => {
     this.setState({
       password: event.target.value
@@ -22,6 +22,8 @@ class LoginForm extends React.Component {
   }
 
   handleSubmit(event) {
+    const username = event.target.children[0].value
+    const password = event.target.children[1].value
     alert('Usersubmitted: ' + this.state.value);
     event.preventDefault();
   }
